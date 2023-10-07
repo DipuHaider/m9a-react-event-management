@@ -12,7 +12,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                // loader: () => fetch('events.json'),
+                loader: () => fetch('events.json'),
             },
             {
                 path: '/login',

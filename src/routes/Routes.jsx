@@ -6,6 +6,7 @@ import Register from "../auth/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Offers from "../pages/Offers/Offers";
 import Profile from "../pages/Profile/Profile";
+import ServiceDetail from "../pages/ServiceDetail/ServiceDetail";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('events.json'),
+            },
+            {
+                path: '/:id',
+                element: <ServiceDetail></ServiceDetail>,
+                loader: () => fetch(`events.json`),
+                
             },
             {
                 path: '/login',

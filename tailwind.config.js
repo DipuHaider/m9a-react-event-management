@@ -8,8 +8,8 @@ export default {
         manrope: "Manrope, sans-serif", // Adds a new `font-manrope` class
       },
       colors: {
-        "theme-primary": "#FF444A",
-        "theme-dark": "#0B0B0B",
+        "theme-primary": "#4D2A68",
+        "theme-light": "#b5acff",
         "theme-txt40": "#0B0B0B66",
         "theme-txt50": "#0B0B0B80",
         "theme-txt70": "#0B0B0BB2",

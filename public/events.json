@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "image": "https://i.ibb.co/jkcM20h/services1-Tech-Conferences-Expos.jpg",
         "title": "Tech Conferences and Expos",
         "price": "$19.99",
@@ -8,7 +8,7 @@
         "details": "Tech Conferences and Expos bring together leading experts, innovators, and enthusiasts in the technology industry. These events showcase the latest advancements, trends, and products in the tech world. From keynote presentations by industry giants to hands-on workshops, attendees gain valuable insights and networking opportunities. Whether you're a seasoned professional or a tech enthusiast, these events provide a platform to learn, connect, and stay updated on the ever-evolving tech landscape. Join us to immerse yourself in the world of innovation and emerging technologies. Don't miss out on this opportunity to be part of the future!"
     },
     {
-        "id": "2",
+        "id": 2,
         "image": "https://i.ibb.co/D5Jv1BT/services2-Gaming-Conventions.jpg",
         "title": "Gaming Conventions",
         "price": "$29.99",
@@ -16,7 +16,7 @@
         "details": "Gaming Conventions are a paradise for gamers and enthusiasts. Dive into a world of immersive gameplay, cutting-edge technology, and gaming culture. From the latest AAA titles to indie gems, these conventions offer a diverse gaming experience. Explore cosplay competitions, meet your favorite streamers, and try out virtual reality gaming. Immerse yourself in the world of esports tournaments and witness top-tier players in action. Gaming Conventions are not just events; they're a celebration of the gaming community. Whether you're a casual gamer or a pro, these events are your gateway to the gaming universe."
     },
     {
-        "id": "3",
+        "id": 3,
         "image": "https://i.ibb.co/t4k1xBF/services3-Hackathons.jpg",
         "title": "Hackathons",
         "price": "$9.99",
@@ -24,7 +24,7 @@
         "details": "Hackathons are the playground for tech enthusiasts, developers, and innovators. These events challenge participants to solve real-world problems through coding, design, and creativity. Join like-minded individuals in a collaborative and competitive atmosphere. With affordable registration, Hackathons offer an accessible way to test your skills, learn new technologies, and build innovative solutions. Whether you're a seasoned coder or a beginner, these events provide a platform to showcase your talents and make a real impact. Embrace the spirit of innovation and join us in shaping the future at Hackathons."
     },
     {
-        "id": "4",
+        "id": 4,
         "image": "https://i.ibb.co/8x6H0bF/services4-Educational-Workshops.jpg",
         "title": "Technical Workshops",
         "price": "$39.99",
@@ -32,7 +32,7 @@
         "details": "Technical Workshops offer a premium learning experience for professionals and enthusiasts. Dive deep into the world of technology and gain hands-on expertise. Led by industry experts, these workshops cover a wide range of topics, from programming and cybersecurity to AI and data science. Premium-quality materials and state-of-the-art facilities ensure a productive and immersive learning environment. Whether you're looking to upskill for your career or explore a new passion, Technical Workshops provide the perfect opportunity. Join us and unlock your potential in the world of technology and innovation."
     },
     {
-        "id": "5",
+        "id": 5,
         "image": "https://i.ibb.co/94Zjhf6/services5-Developers-Meetups.jpg",
         "title": "Developer Meetups",
         "price": "$14.99",
@@ -40,7 +40,7 @@
         "details": "Developer Meetups are the go-to gatherings for software developers, engineers, and tech enthusiasts. These events offer a versatile and practical approach to learning and networking. Explore a wide range of topics, from coding best practices to the latest industry trends. Engage with fellow developers, share knowledge, and collaborate on exciting projects. Whether you're a beginner looking to start your coding journey or a seasoned pro seeking fresh insights, Developer Meetups provide a welcoming and inclusive environment. Join us for an evening of learning, sharing, and connecting with the vibrant developer community."
     },
     {
-        "id": "6",
+        "id": 6,
         "image": "https://i.ibb.co/dJQpM6v/services6-Cosplay-Convenventions.jpg",
         "title": "Cosplay Conventions",
         "price": "$24.99",

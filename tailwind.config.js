@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         inter: "Inter, sans-serif", // Adds a new `font-inter` class
+        manrope: "Manrope, sans-serif", // Adds a new `font-manrope` class
       },
       colors: {
         "theme-primary": "#FF444A",

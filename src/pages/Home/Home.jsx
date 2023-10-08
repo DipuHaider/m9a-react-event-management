@@ -1,20 +1,19 @@
-import NavBar from "../Shared/NavBar/NavBar";
-import Slider from "../Shared/Slider/Slider";
 import { useLoaderData } from "react-router-dom";
+import Banner from "./Banner";
+import SingleService from "./SingleService";
 
 const Home = () => {
-    const news = useLoaderData();
-    console.log(news)
+    const services = useLoaderData();
+    console.log(services)
 
     return (
         <div>
-            <NavBar></NavBar>
-            <Slider></Slider>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="md:col-span-2 border">
-                    {/* {
-                        news.map(singleNews => <NewsCard key={singleNews._id} news={singleNews}></NewsCard>)
-                    } */}
+            <Banner></Banner>
+            <div className="grid grid-cols-3 gap-6">
+                <div className="border">
+                    {
+                        services.map(singleService => <SingleService key={singleService.id} services={singleService}></SingleService>)
+                    }
                 </div>
             </div>
         </div>

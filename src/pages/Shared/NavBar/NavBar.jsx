@@ -1,13 +1,36 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
 
+    const {user, signOutUser} = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+            console.log('User Sign-out successful.');
+            }).catch((error) => {
+            console.error (error)
+            });
+    }
+
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/offers">Offers</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li>
+        {
+            user ? <>
+                <li><NavLink to="/offers">Offers</NavLink></li>
+                <li><NavLink to="/profile">Profile</NavLink></li>
+            </>
+            : 
+            <>
+                <li><NavLink to="/contact">Contact</NavLink></li>
+            </>
+        }
+        {/* <li><NavLink to="/offers">Offers</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li> */}
+        {/* <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/register">Register</NavLink></li> */}
     </>
 
 
@@ -35,9 +58,17 @@ const NavBar = () => {
                         {/* <img src={userDefaultPic} /> */}
                     </div>
                 </label>
-                <Link>
-                    <button className="btn">Login</button>
-                </Link>
+                {
+                    user ? <>
+                        <span>{user.name}</span>
+                        <a onClick={handleSignOut} className="btn btn-sm ">Log Out</a>
+                    </>
+                    : 
+                    <>
+                        <Link to="/login"><button className="btn btn-sm">Login</button></Link>
+                        <Link to="/register"><button className="btn btn-sm">Register</button></Link> 
+                    </>
+                }
             </div>
         </div>
     );

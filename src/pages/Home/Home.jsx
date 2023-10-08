@@ -9,13 +9,14 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className="grid grid-cols-3 gap-6">
-                <div className="border">
+            <div className="max-w-6xl mx-auto ">
+                <div className="grid grid-cols-3 gap-6">
                     {
                         services.map(singleService => <SingleService key={singleService.id} services={singleService}></SingleService>)
                     }
                 </div>
             </div>
+            
         </div>
     );
 };

@@ -4,7 +4,7 @@ import NavBar from "../pages/Shared/NavBar/NavBar";
 
 const Root = () => {
     return (
-        <div className="max-w-6xl mx-auto font-manrope">
+        <div className="mx-auto font-manrope bg-slate-950">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>

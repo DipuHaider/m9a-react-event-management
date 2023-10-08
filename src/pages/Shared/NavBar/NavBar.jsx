@@ -35,7 +35,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar sticky inset-x-0 top-0 z-50 text-white bg-slate-950">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
-
+                <img className="w-10" src="https://i.ibb.co/w0cTWXw/logo.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -60,7 +60,7 @@ const NavBar = () => {
                 </label>
                 {
                     user ? <>
-                        <span>{user.name}</span>
+                        <span>{user.displayName}</span>
                         <a onClick={handleSignOut} className="btn btn-sm ">Log Out</a>
                     </>
                     : 

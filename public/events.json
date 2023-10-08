@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "image": "https://example.com/image1.jpg",
+        "image": "https://i.ibb.co/jkcM20h/services1-Tech-Conferences-Expos.jpg",
         "title": "Tech Conferences and Expos",
         "price": "$19.99",
         "short_details": "Explore cutting-edge technology events for industry professionals and enthusiasts.",
@@ -9,7 +9,7 @@
     },
     {
         "id": "2",
-        "image": "https://example.com/image2.jpg",
+        "image": "https://i.ibb.co/D5Jv1BT/services2-Gaming-Conventions.jpg",
         "title": "Gaming Conventions",
         "price": "$29.99",
         "short_details": "Experience the ultimate gaming conventions with the latest titles and gaming culture.",
@@ -17,7 +17,7 @@
     },
     {
         "id": "3",
-        "image": "https://example.com/image3.jpg",
+        "image": "https://i.ibb.co/t4k1xBF/services3-Hackathons.jpg",
         "title": "Hackathons",
         "price": "$9.99",
         "short_details": "Participate in affordable hackathons and unleash your creativity.",
@@ -25,7 +25,7 @@
     },
     {
         "id": "4",
-        "image": "https://example.com/image4.jpg",
+        "image": "https://i.ibb.co/8x6H0bF/services4-Educational-Workshops.jpg",
         "title": "Technical Workshops",
         "price": "$39.99",
         "short_details": "Enhance your skills with premium-quality technical workshops.",
@@ -33,7 +33,7 @@
     },
     {
         "id": "5",
-        "image": "https://example.com/image5.jpg",
+        "image": "https://i.ibb.co/94Zjhf6/services5-Developers-Meetups.jpg",
         "title": "Developer Meetups",
         "price": "$14.99",
         "short_details": "Join versatile and practical developer meetups for everyday learning and networking.",
@@ -41,7 +41,7 @@
     },
     {
         "id": "6",
-        "image": "https://example.com/image6.jpg",
+        "image": "https://i.ibb.co/dJQpM6v/services6-Cosplay-Convenventions.jpg",
         "title": "Cosplay Conventions",
         "price": "$24.99",
         "short_details": "Experience sporty and comfortable cosplay conventions like never before.",

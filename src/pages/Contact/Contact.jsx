@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 const Contact = () => {
     return (
         <div className="max-w-6xl mx-auto my-20">
+            <Helmet>
+                <title>Contact | Event Management</title>
+            </Helmet>
             <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
                     <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
                         <div className="mt-8 overflow-hidden">

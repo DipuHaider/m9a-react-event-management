@@ -1,4 +1,5 @@
 import { useLoaderData, useParams, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ServiceDetail = () => {
 
@@ -16,6 +17,9 @@ const ServiceDetail = () => {
 
     return (
         <div className="max-w-7xl mx-auto relative items-center text-white">
+            <Helmet>
+                <title>Service Details | Event Management</title>
+            </Helmet>
             
             <div className="grid grid-cols-1 space-y-20">
                 <div className="flex flex-col mt-32 relative">

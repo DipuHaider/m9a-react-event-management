@@ -68,7 +68,7 @@ const Login = () => {
     return (
         <div className="hero min-h-screen bg-black">
             <Helmet>
-                <title>EM Login</title>
+                <title>Login | Event Management</title>
             </Helmet>
             <div className="hero-content flex-col">
             <div className="text-center">

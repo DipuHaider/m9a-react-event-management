@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import SingleOffer from "./SingleOffer";
+import { Helmet } from "react-helmet-async";
 
 const Offers = () => {
 
@@ -8,7 +9,10 @@ const Offers = () => {
 
     return (
 
-        <div className="py-20 bg-purple-200 min-h-fit">  
+        <div className="py-20 bg-purple-200 min-h-fit"> 
+            <Helmet>
+                <title>Offers | Event Management</title>
+            </Helmet>
             <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
                 <div className="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-4">
                 {

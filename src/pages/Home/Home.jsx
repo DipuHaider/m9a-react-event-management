@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import SingleService from "./SingleService";
 import UpcomingEvents from "./UpcomingEvents";
 import OurPartners from "./OurPartners";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const services = useLoaderData();
@@ -10,6 +11,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home | Event Management</title>
+            </Helmet>
             <Banner></Banner>
             <div className="max-w-6xl mx-auto my-20">
                 <div className="flex flex-col items-center text-center">

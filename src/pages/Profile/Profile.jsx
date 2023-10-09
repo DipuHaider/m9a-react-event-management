@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
 
@@ -8,7 +9,10 @@ const Profile = () => {
 
     return (
 
-        <div className="py-32 bg-purple-200 min-h-fit">  
+        <div className="py-32 bg-purple-200 min-h-fit"> 
+            <Helmet>
+                <title>Profile | Event Management</title>
+            </Helmet>
             <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
                 <div className="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-1">
                     <div className="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">

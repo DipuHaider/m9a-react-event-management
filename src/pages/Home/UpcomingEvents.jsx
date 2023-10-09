@@ -8,7 +8,7 @@ const UpcomingEvents = () => {
                     <div className="lg:w-1/2 w-full">
                         <h2 className="text-4xl text-theme-light font-extralight mb-6">Upcoming Events</h2>
                         <h1 role="heading" className="md:text-5xl text-3xl font-bold leading-10 mt-3 text-theme-light">Tech & Gaming</h1>
-                        <p role="contentinfo" className="text-base leading-5 mt-5 text-slate-200">Stay at the forefront of the dynamic world of Tech & Gaming events with our comprehensive guide. Explore the latest in cutting-edge technology, upcoming gaming releases, and thrilling esports tournaments. Whether you're a tech enthusiast or a dedicated gamer, our curated list of events has something for everyone.</p>
+                        <p role="contentinfo" className="text-base leading-5 mt-5 text-slate-200">Stay at the forefront of the dynamic world of Tech & Gaming events with our comprehensive guide. Explore the latest in cutting-edge technology, upcoming gaming releases, and thrilling esports tournaments. Whether you a tech enthusiast or a dedicated gamer, our curated list of events has something for everyone.</p>
 
                         <p role="contentinfo" className="text-base leading-5 mt-5 text-slate-200">Join us on a journey where innovation meets entertainment. Discover the trends that are shaping the future, connect with like-minded enthusiasts, and immerse yourself in the vibrant Tech & Gaming community. Be part of the excitement!</p>
 

@@ -1,32 +1,32 @@
 [
     {
-        "id": "101",
+        "id": 1,
         "title": "Tech Conference VIP Pass",
-        "img": "https://example.com/offer1.jpg",
+        "image": "https://i.ibb.co/vJk0Y84/offer1-vip-pass.jpg",
         "price": "$199.99",
         "discounted_price": "$149.99",
         "details": "Get exclusive access to our Tech Conference and Expos with a VIP Pass. Enjoy priority seating, meet industry leaders, and access all sessions and workshops. Limited time offer!"
     },
     {
-        "id": "102",
+        "id": 2,
         "title": "Gaming Convention Weekend Pass",
-        "img": "https://example.com/offer2.jpg",
+        "image": "https://i.ibb.co/Q9PbdGr/offer2-Gaming-Convention-Weekend-Pass.jpg",
         "price": "$79.99",
         "discounted_price": "$59.99",
         "details": "Join the ultimate gaming experience with a Weekend Pass to our Gaming Conventions. Access all gaming zones, meet your favorite streamers, and compete in esports tournaments. Limited time offer!"
     },
     {
-        "id": "103",
+        "id": 3,
         "title": "Hackathon Starter Kit",
-        "img": "https://example.com/offer3.jpg",
+        "image": "https://i.ibb.co/FV2hQTj/offer3-Hackathon-Starter-Kit.jpg",
         "price": "$49.99",
         "discounted_price": "$39.99",
         "details": "Kickstart your hackathon journey with our Starter Kit. It includes online access to Hackathons, a coding toolkit, and exclusive mentorship. Limited time offer!"
     },
     {
-        "id": "104",
+        "id": 4,
         "title": "Technical Workshop Bundle",
-        "img": "https://example.com/offer4.jpg",
+        "image": "https://i.ibb.co/ch2tygw/offer4-Technical-Workshop.jpg",
         "price": "$299.99",
         "discounted_price": "$249.99",
         "details": "Master your technical skills with our Workshop Bundle. Gain access to premium Technical Workshops, hands-on labs, and certification programs. Limited time offer!"

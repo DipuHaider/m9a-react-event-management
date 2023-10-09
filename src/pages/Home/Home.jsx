@@ -6,7 +6,7 @@ import OurPartners from "./OurPartners";
 
 const Home = () => {
     const services = useLoaderData();
-    console.log(services)
+    // console.log(services)
 
     return (
         <div>

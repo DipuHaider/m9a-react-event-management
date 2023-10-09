@@ -1,6 +1,9 @@
 const UpcomingEvents = () => {
     return (
-        <div className="my-10 bg-slate-900">
+        <div className="my-10 bg-slate-900" data-aos="fade-up"data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
             <div className="max-w-6xl mx-auto p-10 text-white">
                 
                 

@@ -1,7 +1,7 @@
 const UpcomingEvents = () => {
     return (
         <div className="my-10 bg-slate-900">
-            <div className="max-w-6xl mx-auto py-10 text-white">
+            <div className="max-w-6xl mx-auto p-10 text-white">
                 
                 
                 <div className="lg:flex items-center justify-between">

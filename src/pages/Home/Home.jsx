@@ -20,7 +20,7 @@ const Home = () => {
                     <h2 className="text-4xl text-theme-light font-extralight mb-6">Services we do</h2>
                 </div>
                     
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-2">
                     {
                         services.map(singleService => <SingleService key={singleService.id} services={singleService}></SingleService>)
                     }

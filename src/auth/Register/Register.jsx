@@ -3,7 +3,10 @@ import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
-import { sendEmailVerification, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
+// import { sendEmailVerification, updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -21,8 +24,8 @@ const Register = () => {
         const photo_URL = e.target.photo_url.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const accepted = e.target.terms.checked;
-        console.log(name, email, password, accepted)
+        // const accepted = e.target.terms.checked;
+        // console.log(name, email, password, accepted)
 
         //reset error
         setRegisterError('');
@@ -34,34 +37,42 @@ const Register = () => {
             return;
         } else if(!/[A-Z]/.test(password) ) {
             setRegisterError('Your Password should have at least one Uppercase characters.');
+            return; 
+        } else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/\-=|]/.test(password) ) {
+            setRegisterError('Your Password should have at least one Special characters.');
             return;
-        } else if(!accepted) {
-            setRegisterError('Please accept our Terms & Conditions');
-            return;
-        }
+        } 
+        // else if(!accepted) {
+        //     setRegisterError('Please accept our Terms & Conditions');
+        //     return;
+        // }
 
         //create user in firebase
         createUser(email, password)
         .then(result => {
             console.log(result.user);
+            toast("Registration Successful");
             setSuccess(`User: ${email} created successfully`);
 
             // update profile
             updateProfile(result.user, {
                 displayName: name, photoURL: photo_URL
                 }).then(() => {
-                    console.log('Profile Updated');
-                    navigate('/');
+                    //console.log('Profile Updated');
+                    // navigate('/');
+                    setTimeout(() => {
+                        navigate('/');
+                      }, 5000);
                 }).catch(error => {
                     console.error(error)
             });
             
 
             //send verification email
-            sendEmailVerification(result.user)
-            .then(() => {
-                alert('Please check your Email and verify your account.')
-            })
+            // sendEmailVerification(result.user)
+            // .then(() => {
+            //     alert('Please check your Email and verify your account.')
+            // })
         })
         .catch(error => {
             console.error(error)
@@ -114,20 +125,21 @@ const Register = () => {
                                     }
                                 </span>
                             </div>
-                            <br />
+                            {/* <br />
                             <div className="mb-2">
                                 <input type="checkbox" name="terms" id="terms" />
                                 <label className="ml-2 text-black" htmlFor="terms">Accept our <a href="">Terms & Conditions</a></label>
-                            </div>
-                            <br />
+                            </div> */}
+                            {/* <br />
                             <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
+                            </label> */}
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn bg-emerald-300 text-white">Register</button>
                         </div>
                     </form>
+                    <ToastContainer className="mt-32"/>
                     {
                         registerError && <p className="text-red-600">{registerError}</p>
                     }

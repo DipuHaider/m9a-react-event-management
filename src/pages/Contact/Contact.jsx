@@ -1,9 +1,9 @@
-const Offers = () => {
+const Contact = () => {
     return (
         <div className="max-w-6xl mx-auto my-20">
-            <h2>Offers Page</h2>
+            <h2>Contact Page</h2>
         </div>
     );
 };
 
-export default Offers;
+export default Contact;

@@ -7,11 +7,14 @@ import PrivateRoutes from "./PrivateRoutes";
 import Offers from "../pages/Offers/Offers";
 import Profile from "../pages/Profile/Profile";
 import ServiceDetail from "../pages/ServiceDetail/ServiceDetail";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/:id',
-                element: <ServiceDetail></ServiceDetail>,
+                element: <PrivateRoutes><ServiceDetail></ServiceDetail></PrivateRoutes>,
                 loader: () => fetch(`events.json`),
                 
             },
@@ -40,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRoutes><Profile></Profile></PrivateRoutes>,
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>,
             },
         ]
     }

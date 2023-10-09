@@ -16,17 +16,18 @@ const NavBar = () => {
     }
 
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Home</NavLink></li>
         {
             user ? <>
-                <li><NavLink to="/offers">Offers</NavLink></li>
-                <li><NavLink to="/profile">Profile</NavLink></li>
+                <li><NavLink to="/offers" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Offers</NavLink></li>
+                <li><NavLink to="/profile" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Profile</NavLink></li>
             </>
             : 
             <>
-                <li><NavLink to="/contact">Contact</NavLink></li>
+                
             </>
         }
+        <li><NavLink to="/contact" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Contact</NavLink></li>
         {/* <li><NavLink to="/offers">Offers</NavLink></li>
         <li><NavLink to="/profile">Profile</NavLink></li> */}
         {/* <li><NavLink to="/login">Login</NavLink></li>
@@ -61,12 +62,12 @@ const NavBar = () => {
                 {
                     user ? <>
                         <span>{user.displayName}</span>
-                        <a onClick={handleSignOut} className="btn btn-sm ">Log Out</a>
+                        <a onClick={handleSignOut} className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-theme-light hover:border-white">Log Out</a>
                     </>
                     : 
                     <>
-                        <Link to="/login"><button className="btn btn-sm">Login</button></Link>
-                        <Link to="/register"><button className="btn btn-sm">Register</button></Link> 
+                        <Link to="/login"><button className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-theme-light hover:border-white">Login</button></Link>
+                        <Link to="/register"><button className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-theme-light hover:border-white">Register</button></Link> 
                     </>
                 }
             </div>

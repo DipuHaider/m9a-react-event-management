@@ -50,7 +50,7 @@ const Register = () => {
         //create user in firebase
         createUser(email, password)
         .then(result => {
-            console.log(result.user);
+            //console.log(result.user);
             toast("Registration Successful");
             setSuccess(`User: ${email} created successfully`);
 
@@ -62,7 +62,7 @@ const Register = () => {
                     // navigate('/');
                     setTimeout(() => {
                         navigate('/');
-                      }, 5000);
+                    }, 3000);
                 }).catch(error => {
                     console.error(error)
             });

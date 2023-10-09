@@ -12,6 +12,10 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className="max-w-6xl mx-auto my-20">
+                <div className="flex flex-col items-center text-center">
+                    <h2 className="text-4xl text-theme-light font-extralight mb-6">Services we do</h2>
+                </div>
+                    
                 <div className="grid grid-cols-3 gap-6">
                     {
                         services.map(singleService => <SingleService key={singleService.id} services={singleService}></SingleService>)

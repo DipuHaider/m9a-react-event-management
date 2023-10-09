@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { sendEmailVerification, updateProfile } from "firebase/auth";
@@ -12,11 +12,13 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
+        const photo_URL = e.target.photo_url.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const accepted = e.target.terms.checked;
@@ -46,9 +48,10 @@ const Register = () => {
 
             // update profile
             updateProfile(result.user, {
-                displayName: name, photoURL: "https://example.com/jane-q-user/profile.jpg"
+                displayName: name, photoURL: photo_URL
                 }).then(() => {
-                    console.log('Profile Updated')
+                    console.log('Profile Updated');
+                    navigate('/');
                 }).catch(error => {
                     console.error(error)
             });
@@ -67,16 +70,15 @@ const Register = () => {
 
     }
 
-
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-black">
             <Helmet>
-                <title>RA | Register</title>
+                <title>EM Register</title>
             </Helmet>
             <div className="hero-content flex-col">
             <div className="text-center">
-                <h1 className="text-5xl font-bold">Register now!</h1>
-                <p className="py-6">Register Authentication with firebase by Email And Password</p>
+                <h1 className="text-5xl font-bold text-white">Register now!</h1>
+                <p className="py-6 text-white">Register Authentication with firebase by Email And Password</p>
             </div>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
@@ -86,6 +88,12 @@ const Register = () => {
                             <span className="label-text">Name</span>
                             </label>
                             <input type="name" name="name" required placeholder="Your name" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                            <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="photo_url" required placeholder="Place PhotoURL here" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -109,7 +117,7 @@ const Register = () => {
                             <br />
                             <div className="mb-2">
                                 <input type="checkbox" name="terms" id="terms" />
-                                <label className="ml-2" htmlFor="terms">Accept our <a href="">Terms & Conditions</a></label>
+                                <label className="ml-2 text-black" htmlFor="terms">Accept our <a href="">Terms & Conditions</a></label>
                             </div>
                             <br />
                             <label className="label">
@@ -126,7 +134,7 @@ const Register = () => {
                     {
                         success && <p className="text-green-600">{success}</p>
                     }
-                    <p>Already Registered? <Link to="/login"><button className="btn bg-cyan-400 btn-sm text-white">Login</button></Link></p>
+                    <p className="text-black">Already Registered? <Link to="/login"><button className="btn bg-cyan-400 btn-sm text-white">Login</button></Link></p>
                 </div>
             </div>
         </div>

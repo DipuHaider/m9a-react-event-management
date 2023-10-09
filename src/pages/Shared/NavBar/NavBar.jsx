@@ -14,24 +14,19 @@ const NavBar = () => {
             console.error (error)
             });
     }
+    const userDefaultPic = "https://i.ibb.co/F7V7vzb/user.jpg";
 
     const navLinks = <>
-        <li><NavLink to="/" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Home</NavLink></li>
+        <li><NavLink to="/" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg  border border-none hover:border-white">Home</NavLink></li>
         {
             user ? <>
-                <li><NavLink to="/offers" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Offers</NavLink></li>
-                <li><NavLink to="/profile" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Profile</NavLink></li>
+                <li><NavLink to="/offers" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Offers</NavLink></li>
+                <li><NavLink to="/profile" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Profile</NavLink></li>
             </>
             : 
-            <>
-                
-            </>
+            <></>
         }
-        <li><NavLink to="/contact" className="bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Contact</NavLink></li>
-        {/* <li><NavLink to="/offers">Offers</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li> */}
-        {/* <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li> */}
+        <li><NavLink to="/contact" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Contact</NavLink></li>
     </>
 
 
@@ -53,10 +48,12 @@ const NavBar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-6">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        {/* <img src={userDefaultPic} /> */}
+                    { user ? <><img className="w-10" src={user.photoURL} alt="" /></>
+                        : <><img className="w-10" src={userDefaultPic} alt="default" /></>
+                    }
                     </div>
                 </label>
                 {

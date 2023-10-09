@@ -23,6 +23,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="space-y-4">
                     <h1 className="text-4xl font-bold text-donation-dark">{service.title}</h1>
+                    <h1 className="text-2xl font-bold text-donation-dark">{service.price}</h1>
                     <p className="text-donation-txt70 text-base font-normal leading-7 text-justify">{service.details}</p>
                 </div>
                 <div>
